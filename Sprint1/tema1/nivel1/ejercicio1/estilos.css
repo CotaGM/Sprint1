@@ -1,0 +1,53 @@
+*{
+    margin: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.padre{
+    
+}
+    .header{ 
+        background: #000;
+    }
+        .menu{
+            background: #35374B;
+        }
+            .logo{
+                background: #FF6868;
+            }
+            .nav{
+                background: #FF6868;
+            }
+            .social{
+                background: #FF6868;
+            }
+        .texto-principal{
+            background: #EE9322;
+        }
+            h1{
+               background: #E9B824;
+            }
+    .section{
+        background: #000;    
+    }
+        .articulos{
+            background: #47597E;
+        }
+            .article{
+                background: #3876BF;
+            }
+            .navegacion{
+                background: #B1D0E0;
+            }
+        .aside{
+            background: #F05454;
+        }
+            .publicidad{
+                background: #E9B824;
+            }    
+    .footer{
+        background: #000;
+    }
+        .pie{
+            background: #EEE4B1;
+        }
