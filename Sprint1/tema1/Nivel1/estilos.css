@@ -48,7 +48,7 @@ flex-flow : column nowrap;
         }
             .article{
                 background: #3876BF;
-                flex:1 1 40%;
+                flex:1 1 35%;
             }
             .navegacion{
                 background: #B1D0E0;
@@ -76,4 +76,10 @@ flex-flow : column nowrap;
       flex-direction: column;
       height: auto;
    } 
+}
+/* Max width phone*/
+@media all and (max-width: 375px){
+    .articulos{
+        flex-direction: column;
+    }
 }
