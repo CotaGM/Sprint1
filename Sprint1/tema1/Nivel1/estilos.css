@@ -67,4 +67,13 @@ flex-flow : column nowrap;
         .pie{
             background: #EEE4B1;
         } 
-       
+/* Max width tablet*/
+@media all and (max-width: 800px){
+   .section{
+     flex-direction: column;
+   } 
+   .menu{
+      flex-direction: column;
+      height: auto;
+   } 
+}
