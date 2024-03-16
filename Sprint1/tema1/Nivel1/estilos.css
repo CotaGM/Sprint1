@@ -2,45 +2,61 @@
     margin: 10px;
     padding: 10px;
     box-sizing: border-box;
+    max-width: 1200px;
 }
 .padre{
-    
+display: flex;
+flex-flow : column nowrap;
 }
     .header{ 
         background: #000;
+        display: flex;
+        flex-flow : column nowrap;
     }
         .menu{
             background: #35374B;
+            display: flex;
+            flex-flow : row nowrap;
         }
             .logo{
                 background: #FF6868;
+                flex:1 1 auto;
             }
             .nav{
                 background: #FF6868;
+                flex:1 1 auto;
             }
             .social{
                 background: #FF6868;
+                flex:1 1 auto;
             }
-        .texto-principal{
+        .banner{
             background: #EE9322;
         }
             h1{
                background: #E9B824;
             }
     .section{
-        background: #000;    
+        background: #000; 
+        display: flex;   
     }
         .articulos{
             background: #47597E;
+            flex:2 1 auto;
+            display: flex;
+            flex-flow: row wrap;
         }
             .article{
                 background: #3876BF;
+                flex:1 1 40%;
             }
             .navegacion{
                 background: #B1D0E0;
+                flex:1 1 100%;
             }
         .aside{
             background: #F05454;
+            flex: 1 1 auto;
         }
             .publicidad{
                 background: #E9B824;
@@ -50,4 +66,5 @@
     }
         .pie{
             background: #EEE4B1;
-        }
+        } 
+       
