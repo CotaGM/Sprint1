@@ -1,0 +1,100 @@
+*{
+    margin: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    max-width: 1200px;
+}
+.padre{
+display: flex;
+flex-flow : column nowrap;
+}
+    .header{ 
+        background: url(imagenes/header.jpg);
+        background-position: center;
+        background-attachment: contain;
+        background-size: 1600px 800px;
+        display: flex;
+        flex-flow: column nowrap; 
+    }
+        .menu{
+            display: flex;
+            flex-wrap:  wrap;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+            .logo{
+                background: #F05454;
+                flex:1 1 auto;
+                align-self: flex-start;
+                height: 95px;
+                background: url(imagenes/Material\ activitat\ Flex\ nivell\ 2-logo.png);
+                background-position: top;
+                background-attachment: contain;
+                background-size: 75px 66px;
+                background-repeat: no-repeat;
+                display: flex;
+                flex-flow: column nowrap;
+            }
+            .nav{
+                background: #F05454;
+                flex:5 1 auto;      
+            }
+            .social{
+                background: #F05454;
+                flex:1 1 auto;
+            }
+        .banner{
+            background: #4c4b4a;
+            flex-basis: content;
+            height: auto;
+        }
+            h1{
+               background: #E9B824;
+            }
+    .section{
+        background: #000; 
+        display: flex;   
+    }
+        .articulos{
+            background: #47597E;
+            flex:2 1 auto;
+            display: flex;
+            flex-flow: row wrap;
+        }
+            .article{
+                background: #3876BF;
+                flex:1 1 35%;
+            }
+            .navegacion{
+                background: #B1D0E0;
+                flex:1 1 100%;
+            }
+        .aside{
+            background: #F05454;
+            flex: 1 1 auto;
+        }
+            .publicidad{
+                background: #E9B824;
+            }    
+    .footer{
+        background: #000;
+    }
+        .pie{
+            background: #EEE4B1;
+        } 
+/* Max width tablet*/
+@media all and (max-width: 800px){
+   .section{
+     flex-direction: column;
+   } 
+   .menu{
+      flex-direction: column;
+      height: auto;
+   } 
+}
+/* Max width phone*/
+@media all and (max-width: 375px){
+    .articulos{
+        flex-direction: column;
+    }
+}
