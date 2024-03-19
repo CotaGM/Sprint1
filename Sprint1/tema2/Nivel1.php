@@ -1,4 +1,5 @@
 <?php
+//Variables y constantes
 $num_int = 10;
 $num_doub = 3.14;
 $nombre = "Constanza";
@@ -6,19 +7,64 @@ $valor_bool = true;
 define("constanza", 40);
 $saludo = "Hello World!";
 $curso = "Este es el curso de PHP";
+$x = 10;
+$y = 5;
+$n = 56.7;
+$m = 9.6;
 
 //ejercicio 1
-echo $num_int, "<br/>",
-$num_doub, "<br/>",
-$nombre, "<br/>",
-$valor_bool. "<br/>";
-echo "Mi nombre es ". $nombre. " y tengo ". constanza.  " años.". "<br/>";
+echo $num_int. "<br/>".
+$num_doub. "<br/>".
+$nombre. "<br/>".
+$valor_bool, "<br/>";
+echo "Mi nombre es ". $nombre. " y tengo ". constanza.  " años". "<br/>";
 
 //ejercicio 2
-echo $saludo. "<br/>";
+echo $saludo, "<br/>";
 $saludo = strtoupper($saludo);
 echo $saludo. "<br/>";
 echo strlen($saludo). "<br/>";
 echo strrev($saludo). "<br/>";
-echo $saludo. " ". $curso. ".<br/>"
+echo $saludo. " ". $curso. "<br/>";
+
+//Ejercicio 3
+echo $x. "<br/>".
+$y. "<br/>";
+
+echo $x, " + ", $y, " = ", $x + $y, "<br/>",
+$x, " - ", $y, " = ", $x - $y, "<br/>",
+$x, " * ", $y, " = ", $x * $y, "<br/>",
+$x, " % ", $y, " = ", $x % $y, "<br/>";
+
+echo $n, " + ", $m, " = ", $n + $m, "<br/>",
+$n, " - ", $m, " = ", $n - $m, "<br/>",
+$n, " * ", $m, " = ", $n * $m, "<br/>",
+$n, " % ", $m, " = ", $n % $m, "<br/>";
+
+echo $x, " * 2 = ", $x * 2, "<br/>",
+$y, " * 2 = ", $y * 2, "<br/>",
+$n, " * 2 = ", $n * 2, "<br/>",
+$m, " * 2 = ", $m * 2, "<br/>";
+
+echo $x, " + ", $y, " + ", $n, " + ", $m, " = ", $x + $y + $n + $m, "<br/>";
+echo $x, " * ", $y, " * ", $n, " * ", $m, " = ", $x * $y * $n * $m, "<br/>";
+
+function calculadora ($a , $b, $operacion) {
+   switch($operacion){
+          case "+":
+             $resultado = $a + $b;
+             break;
+          case "-":
+             $resultado = $a - $b;
+             break;
+          case "*":
+             $resultado = $a * $b;
+             break;
+          case "/":
+             $resultado = $a / $b;
+             break;             
+   }
+   return $resultado;
+}
+echo calculadora(2, 3, "*"), "<br/>";
 ?>
