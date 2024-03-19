@@ -6,10 +6,9 @@ $valor_bool = true;
 define("constanza", 40);
 
 //ejercicio 1
-echo $saludo;
-echo $num_int, "<br/>", 
-$num_doub, "<br/>", 
+echo $num_int, "<br/>",
+$num_doub, "<br/>",
 $nombre, "<br/>",
-$valor_bool, "<br/>";
-echo "Mi nombre es ". $nombre. " y tengo ". constanza. " años.";
-?>  
+$valor_bool. "<br/>";
+echo "Mi nombre es ". $nombre. " y tengo ". constanza.  " años.". "<br/>";
+?> 
