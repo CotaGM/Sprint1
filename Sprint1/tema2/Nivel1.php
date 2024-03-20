@@ -100,4 +100,14 @@ function grado($nota){
     }
   }
   grado(59);
+  //Ejercicio 6
+ function isBitten(){
+    if (rand(1, 10) > 5) {
+     echo "Charlie me mordió el dedo";  
+    }
+    else{
+     echo "Charlie no me ha mordido";
+  }
+ }
+ isBitten();
 ?>
