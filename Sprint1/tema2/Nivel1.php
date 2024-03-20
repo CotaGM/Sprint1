@@ -83,4 +83,21 @@ function contador($a = 10, $b = 1){
    }
 }
 contador(10, 3);
+
+//Ejercicio 5
+function grado($nota){
+    if($nota >= 60) {
+      echo "Primera división", "<br/>";
+    }
+    else if($nota >= 45 && $nota <= 59){
+      echo "Segunda división", "<br/>";
+    }
+    else if($nota >= 33 && $nota <= 44){
+      echo "Tercera division", "<br/>";
+    }
+    else{
+      echo "El estudiante reprobará";
+    }
+  }
+  grado(59);
 ?>
