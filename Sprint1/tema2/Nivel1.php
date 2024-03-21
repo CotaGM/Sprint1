@@ -57,7 +57,7 @@ echo $x, " + ", $y, " + ", $n, " + ", $m, " = ", $x + $y + $n + $m, "<br/>";
 echo $x, " * ", $y, " * ", $n, " * ", $m, " = ", $x * $y * $n * $m, "<br/>";
 
 
-function calculadora ($a , $b, $operacion) {
+function calculadora($a , $b, $operacion): float {
   switch($operacion){
          case "+":
             $resultado = $a + $b;
@@ -74,7 +74,7 @@ function calculadora ($a , $b, $operacion) {
   }
   return $resultado;
 }
-echo calculadora(2, 3, "*"), "<br/>";
+echo calculadora(2.5, 3, "*"), "<br/>";
 
 //Ejercicio 4
 function contador($a = 10, $b = 1){
@@ -89,17 +89,17 @@ function grado($nota){
     if($nota >= 60) {
       echo "Primera división", "<br/>";
     }
-    else if($nota >= 45 && $nota <= 59){
+    else if($nota >= 45){
       echo "Segunda división", "<br/>";
     }
-    else if($nota >= 33 && $nota <= 44){
+    else if($nota >= 33){
       echo "Tercera division", "<br/>";
     }
     else{
       echo "El estudiante reprobará";
     }
   }
-  grado(59);
+  grado(48);
   //Ejercicio 6
  function isBitten(){
     if (rand(1, 10) > 5) {

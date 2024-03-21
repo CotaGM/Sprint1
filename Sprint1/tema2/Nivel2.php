@@ -1,6 +1,6 @@
 <?php
 //Ejercicio 1
-function costoLlamada($min){
+function calcularCostoLlamada($min){
   if ($min < 3 ){
     echo 10, " centimos", "<br/>";
   }  
