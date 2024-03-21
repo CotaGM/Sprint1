@@ -8,7 +8,7 @@ function calcularCostoLlamada($min){
     echo 10 + (($min - 3)* 5), " centimos", "<br/>";
   }
 }
-costoLlamada(10);
+calcularCostoLlamada(10);
 
 //Ejercicio 2
 function chocolate($cantidad){
