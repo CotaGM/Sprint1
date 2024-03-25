@@ -25,7 +25,7 @@ function characterDetection($words_array, $characterX) {
 $words_array = array("hola", "php");
 echo characterDetection($words_array, "h"),"<br/>";
 
-//Exercise 4 
+//Exercise 4 associative array
 $data_student = [
 "nombre" => "Constanza", 
 "edad" => "40", 
