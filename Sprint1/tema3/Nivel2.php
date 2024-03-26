@@ -13,28 +13,39 @@ echo "<br/>";
 
 //Exercise 2
 $php_grades = [
-    "Paola" => [5, 7, 4, 8, 3, 10], 
-    "Carolina" => [8, 10, 10, 7, 9, 10], 
-    "Cristian" => [2, 5, 7, 4, 5, 8], 
-    "Alfonso" => [5, 5, 6, 5, 10, 7], 
-    "Andrea" => [2, 3, 3, 5, 7, 7], 
+    "Paola" => [5, 7, 4, 8, 3], 
+    "Carolina" => [8, 10, 10, 7, 9], 
+    "Cristian" => [2, 5, 7, 4, 5], 
+    "Alfonso" => [5, 5, 6, 5, 10], 
+    "Andrea" => [2, 3, 3, 5, 7], 
 ];
 
-function gradeAverageStudent($php_grades): float{
-    $total_students = count($php_grades);
-    $total_notas_clase = 0;
+function gradeAverageClass($php_grades): float{
     
-    foreach($php_grades as $student => $individual_grades){
-        $sum_grades = array_sum($individual_grades);
-        $total_grades = count($individual_grades);
-        $grade_average_student = $sum_grades / $total_grades;
+    /*failed try:
+    ¿Is not possible to do the calculation on the $php_grades array?
+    Had to split the big array into individual ones to use the array_sum function
+    
+    $total_grades_class = count($php_grades);
+    $sum_grades_class = array_sum($php_grades);
+    $average_grades_class = $sum_grades_class / $total_grades_class ;
+    echo "Promedio clase: $average_grades_class <br>";*/
 
-        echo "Promedio del alumno $student: $grade_average_student <br>";
+    // individual calculation
+    foreach($php_grades as $student => $individual_grades){ 
+        $sum_grades_student = array_sum($individual_grades);
+        $total_grades_student = count($individual_grades);
+        $average_grades_student = $sum_grades_student / $total_grades_student;
 
-        $total_class += $sum_grades;
+        echo "Promedio del alumno $student: $average_grades_student <br>";
+    
+        $sum_grades_class += $sum_grades_student;
     }
-    $average_class = $total_class / ($total_students * $total_grades);
-    echo "Promedio clase: $average_class";
+    //Class calculation
+    $number_of_students = count($php_grades);
+    $average_grades_class =  $sum_grades_class / ($number_of_students * $total_grades_student);
+
+    echo "Promedio de la clase PHP: $average_grades_class";
 }      
-gradeAverageStudent($php_grades);
+gradeAverageClass($php_grades);
 ?>
