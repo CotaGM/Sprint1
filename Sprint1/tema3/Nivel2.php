@@ -20,7 +20,7 @@ $php_grades = [
     "Andrea" => [2, 3, 3, 5, 7], 
 ];
 
-function gradeAverageClass($php_grades): float{
+function calcutationGradesClass($php_grades): float{
     
     /*failed try:
     ¿Is not possible to do the calculation on the $php_grades array?
@@ -47,5 +47,5 @@ function gradeAverageClass($php_grades): float{
 
     echo "Promedio de la clase PHP: $average_grades_class";
 }      
-gradeAverageClass($php_grades);
+calcutationGradesClass($php_grades);
 ?>
