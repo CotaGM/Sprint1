@@ -1,19 +1,27 @@
 <?php
 class PokerDice{
 
-  public $dice;
-
-  public function __construct($dice){
-  $this -> dice = $dice;
-  }
-
+  public $dice = ["As", "K", "Q", "J", 7 , 8];
+  public $dice_face;
+  public $total_throws = 0;
+ 
   public function throw(){
     $random_num = array_rand($this -> dice);
-    $dice_face =  $this -> dice [$random_num];
-    echo $dice_face;
+    $this -> dice_face =  $this -> dice [$random_num];
+    $this -> total_throws++;
+  }
+  public function shapeName(){
+    echo "Ultima figura: ". $this -> dice_face . "<br>";
+  }
+  public function getTotalThrows(){
+    echo "Total tiradas: ". $this -> total_throws;
   }
 }
-  $dice = ["As", "K", "Q", "J", 7 , 8];
-  $dice1 = new PokerDice($dice);
+  //Verificación de los metodos de la clase
+  $dice1 = new PokerDice();
   $dice1 -> throw();
+  $dice1 -> shapeName();
+  $dice1 -> getTotalThrows();
+
+
 ?>
