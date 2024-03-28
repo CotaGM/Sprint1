@@ -12,17 +12,17 @@ abstract class Animal{
     public function __construct($name){
       $this -> name = $name;
     }
-    abstract public function makeSound(); 
+    abstract public function makeSound(): String; 
 }
     
 class Cat extends Animal{
-   public function makeSound(){
+   public function makeSound(): String{
      return "El ". $this -> name. " hace Miau<br>";
    }  
 }
 
 class Dog extends Animal{
-    public function makeSound(){
+    public function makeSound(): String{
      return "El ". $this -> name. " hace Guaf<br>";
     }
 }
@@ -33,4 +33,27 @@ echo $cat -> makeSound();
 $dog = new Dog("perro");
 echo $dog -> makeSound();
 
+//Utilizando interface
+
+interface AnimalInterface{
+
+    public function makeSound2(): String;
+}
+
+class Gato implements AnimalInterface{
+    public function makeSound2(): String{
+      return "El gato hace Miau<br>";
+    }
+}
+
+class Perro implements AnimalInterface{
+    public function makeSound2(): String{
+        return "El perro hace Guaf<br>";
+    }   
+}
+$gato = new Gato();
+echo $gato -> makeSound2();
+
+$perro = new Perro();
+echo $perro -> makeSound2();
 ?>
