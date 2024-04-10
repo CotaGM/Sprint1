@@ -41,20 +41,12 @@ class Shape{
 
 class Triangle extends Shape{
 
-    public function __construct($width, $high){
-        Shape::__construct($width, $high);
-    }
-    
     public function calculateArea(){
        $this -> result = ($this -> width * $this -> high) / 2;
     } 
 }
 
 class Rectangle extends Shape{
-    
-    public function __construct($width, $high){
-        Shape::__construct($width, $high);
-    }
     
     public function calculateArea(){
        $this -> result = ($this -> width * $this -> high);
