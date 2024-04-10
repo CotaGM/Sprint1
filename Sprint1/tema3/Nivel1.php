@@ -13,16 +13,15 @@ array_splice($X, 5, 1);
 echo count($X), "<br/>";
 
 //Exercise 3 for each
-function characterDetection($words_array, $characterX) {
-   foreach($words_array as $words);
-       if (strpos($words, $characterX) == true){
-         return "Caracter encontrado";
-       }
-       else{
-         return "Caracter no encontrado";
-       }
+function characterDetection($words_array, $characterX): String{
+  foreach($words_array as $words){
+    if (str_contains($words, $characterX) == false){
+      return "Caracter no encontrado";
     }
-$words_array = array("hola", "php");
+  }
+  return "Caracter encontrado";
+}
+$words_array = array("hello", "papa", "php");
 echo characterDetection($words_array, "h"),"<br/>";
 
 //Exercise 4 associative array
