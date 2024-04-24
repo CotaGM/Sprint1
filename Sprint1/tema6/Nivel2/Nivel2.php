@@ -1,4 +1,5 @@
 <?php
+//Ejercicio 1
 class MagicConstants{
 
   public function getFile(){
@@ -6,19 +7,19 @@ class MagicConstants{
   }
 
   public function getDir(){
-    return __DIR__;
+    return __DIR__; 
   }
-   
+ 
+  //Ejercicio 2
   public function __toString(){
     return "La ruta del archivo de métodos mágicos es el siguiente: <br>". $this -> getFile();
   }
-}  
-/*$file_name = new MagicConstants();
-echo $file_name -> getFile(). "<br>";
-
-$directory_file = new MagicConstants();
-echo $directory_file -> getDir(). "<br>";*/
-
+}
+//Ejercicio 1
 $file_name = new MagicConstants();
-echo $file_name;
+echo $file_name -> getFile(). "<br>";
+echo $file_name -> getDir(). "<br>";
+
+//Ejercicio 2
+echo $file_name -> __toString();
 ?>

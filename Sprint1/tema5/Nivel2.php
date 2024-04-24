@@ -21,7 +21,6 @@ class Triangle extends Shape{
        return $this -> result. " cm2 <br>";
     } 
 }
-
 class Rectangle extends Shape{
     
     public function calculateArea(){

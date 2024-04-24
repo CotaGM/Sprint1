@@ -24,7 +24,8 @@ class PokerDice{
 
 //Verificación de los metodos de la clase
 $dice = array("As", "K", "Q", "J", 7 , 8);
-$game = new PokerDice($dice);
+$game = new PokerDice();
+$game -> __Constructor($dice);
 $game -> throw();
 $game -> shapeName();
 
@@ -40,14 +41,12 @@ function throwFiveDices(){
   $game1 -> throw();
   $game1 -> shapeName();
   
-
   //dado 2
   $game2 = new PokerDice();
   $game2 -> __Constructor($dice2);
   $game2 -> throw();
   $game2 -> shapeName();
   
-
   //dado 3
   $game3 = new PokerDice();
   $game3 -> __Constructor($dice);
