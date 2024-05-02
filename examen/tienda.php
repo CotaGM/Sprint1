@@ -14,7 +14,7 @@ public array $inventario;
 //metodos
 //Producto mas barato
     public function getMuebleMasBarato(): void{
-    $precioMin = 1000;
+    $precioMin = PHP_INT_MAX;
     $productoMasBarato = null;
     
       foreach($this -> inventario as $producto){
