@@ -3,31 +3,25 @@
 use PHPUnit\Framework\TestCase;
 class GradoTest extends TestCase {
 
-  public function testGrado(){
-   /*if($nota >= 60) {
-     echo "Primera división", "<br/>";
-   }
-   else if($nota >= 45){
-     echo "Segunda división", "<br/>";
-   }
-   else if($nota >= 33){
-     echo "Tercera division", "<br/>";
-   }
-   else{
-     echo "El estudiante reprobará";
-   }*/
+  public function testStudentSuspended(){ 
+  $number = new Grado();
+  $this->assertEquals("El estudiante reprobará", $number->grado(31));
+  }
 
-   $number = new Grado();
-   $this->assertEquals("El estudiante reprobará", $number->grado(31));
+  public function testStudentThirdDivision(){
+  $number = new Grado();
+  $this->assertEquals("Tercera division", $number->grado(34));
+  }
 
+  public function testStudentSecondDivision(){
+  $number = new Grado();
+  $this->assertEquals("Segunda division", $number->grado(45));
+  }
 
-   $this->assertEquals("Tercera division", $number->grado(34));
+  public function testStudentFirstDivision(){
+  $number = new Grado();
+  $this->assertEquals("Primera division", $number->grado(60));
+  }
 
-
-   $this->assertEquals("Segunda division", $number->grado(45));
-
-
-   $this->assertEquals("Primera division", $number->grado(60));
- }
 }
 ?>
